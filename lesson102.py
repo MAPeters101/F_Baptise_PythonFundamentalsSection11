@@ -145,6 +145,53 @@ print()
 #     raise
 # print('program still running...')
 
+try:
+    raise ValueError('custom message')
+except ValueError as ex:
+    print(f'Handled a ValueError: {ex}')
+finally:
+    print('This is always executed.')
+print('All done.')
+print()
+
+
+# try:
+#     raise TypeError('custom message')
+# except ValueError as ex:
+#     print(f'Handled a ValueError: {ex}')
+# finally:
+#     print('This is always executed.')
+# print('All done.')
+# print()
+
+
+# try:
+#     raise ValueError('custom message')
+# except ValueError as ex:
+#     print(f'Handled a ValueError: {ex}')
+#     raise TypeError('Changing to a type error')
+# finally:
+#     print('This is always executed.')
+# print('All done.')
+# print()
+
+
+try:
+    print('Nothing to see here...')
+except ValueError:
+    print(f'Handled a ValueError')
+finally:
+    print('This is always executed.')
+print('All done.')
+print()
+
+
+try:
+    print('Nothing to see here...')
+finally:
+    print('This is always executed.')
+print('All done.')
+print()
 
 
 
